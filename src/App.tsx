@@ -20,9 +20,29 @@ function App() {
         setCurrentTask(event.target.value);
     };
 
+    const addTask = () => {
+        if (!currentTask) {
+            alert("Input is empty!");
+            return;
+        }
+        const text = currentTask;
+        const copyTasks = [...tasks];
+        const task = {
+            text,
+            id: Date.now(),
+        };
+        copyTasks.push(task);
+        setTasks(copyTasks);
+        setCurrentTask("");
+    };
+
     return (
         <div className="container">
             <AddTaskForm
+                value={currentTask}
+                onClickButton={() => {
+                    addTask();
+                }}
                 onTextChange={(event) => {
                     changeText(event);
                 }}
