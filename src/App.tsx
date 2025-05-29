@@ -36,6 +36,10 @@ function App() {
         setCurrentTask("");
     };
 
+    const deleteTask = (id: number) => {
+        const copyTasks = tasks.filter((task) => task.id !== id);
+        setTasks(copyTasks);
+    };
     return (
         <div className="container">
             <AddTaskForm
@@ -54,6 +58,9 @@ function App() {
                             key={`task.text-${index}`}
                             text={task.text}
                             id={task.id}
+                            onClickButton={() => {
+                                deleteTask(task.id);
+                            }}
                         />
                     );
                 })}
