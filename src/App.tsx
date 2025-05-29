@@ -19,7 +19,15 @@ function App() {
         <div className="container">
             <AddTaskForm />
             <div className="tasksBlock">
-                <Task />
+                {tasks.map((task, index) => {
+                    return (
+                        <Task
+                            key={`task.text-${index}`}
+                            text={task.text}
+                            id={task.id}
+                        />
+                    );
+                })}
             </div>
         </div>
     );

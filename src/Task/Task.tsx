@@ -1,9 +1,14 @@
 import "./Task.css";
 
-const Task = () => {
+interface Props {
+    text: string;
+    id: number;
+}
+
+const Task = (props: Props) => {
     return (
         <div className="Task">
-            <p>Text of task</p>
+            <p>{props.text}</p>
             <button type="button">Delete</button>
         </div>
     );
