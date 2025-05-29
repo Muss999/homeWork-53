@@ -1,6 +1,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    background-color: rgb(205, 201, 201);
 }
 .container {
     max-width: 1200px;
