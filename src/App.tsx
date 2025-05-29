@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import AddTaskForm from "./AddTaskForm/AddTaskForm";
 import "./App.css";
 import Task from "./Task/Task";
@@ -14,10 +14,19 @@ function App() {
             id: 89,
         },
     ]);
+    const [currentTask, setCurrentTask] = useState("");
+
+    const changeText = (event: ChangeEvent<HTMLInputElement>) => {
+        setCurrentTask(event.target.value);
+    };
 
     return (
         <div className="container">
-            <AddTaskForm />
+            <AddTaskForm
+                onTextChange={(event) => {
+                    changeText(event);
+                }}
+            />
             <div className="tasksBlock">
                 {tasks.map((task, index) => {
                     return (
