@@ -1,9 +1,10 @@
+import AddTaskForm from "./AddTaskForm/AddTaskForm";
 import "./App.css";
 
 function App() {
     return (
-        <div>
-            <div></div>
+        <div className="container">
+            <AddTaskForm />
         </div>
     );
 }

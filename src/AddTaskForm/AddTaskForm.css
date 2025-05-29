@@ -1,0 +1,23 @@
+.inputBlock {
+    display: flex;
+    gap: 20px;
+    width: 60%;
+    margin: 20px auto 0;
+}
+.inputBlock input {
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 80%;
+    border: 1px solid black;
+    font-size: 16px;
+}
+.inputBlock button {
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 16px;
+}
+.inputBlock button:active {
+    box-shadow: 0 0 6px 0 gray;
+}
