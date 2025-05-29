@@ -1,0 +1,24 @@
+.Task {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+.Task p {
+    margin: 0;
+}
+.Task button {
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid black;
+    font-size: 16px;
+}
+.Task button:active {
+    box-shadow: 0 0 6px 0 gray;
+}
